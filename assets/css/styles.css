@@ -38,6 +38,16 @@ body {
     min-height: 100vh;
     background: transparent;
 }
+p {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    padding: 0px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 
 nav {
     z-index: -10;
@@ -45,7 +55,7 @@ nav {
 
 .diary {
     display: flex;
-    min-width: 600px;
+    min-width: 700px;
     justify-content: center;
     align-items: center;
     min-height: 100vh;

@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        #preloader {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999999999;
+            transition: opacity 1.5s ease-out;
+        }
+    </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">    
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"> 
     <title>The Seeker's Diary</title>
 </head>
 <body>
@@ -15,7 +30,13 @@
           <h1 id="title">The Seeker's Diary</h1>      
         </div>
         <div class="hard"><img src="./assets/img/bg/cover2.jpg" alt=""></div>
-        <div><img src="./assets/img/1.jpg" alt=""></div>
+        <div>
+            <p>
+                "Living in the moment is far from living between the past and the future.<br/>
+                It is immersion into everything."<br/><br/>
+                - The Seeker
+            </p>
+        </div>
         <div><img src="./assets/img/2.jpg" alt=""></div>
         <div><img src="./assets/img/3.jpg" alt=""></div>
         <div><img src="./assets/img/4.jpg" alt=""></div>
@@ -53,5 +74,17 @@
         crossorigin="anonymous"></script>
     <script src="./assets/js/lib/turn.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <div id="preloader">
+        <img src="./assets/img/loading/loading_animation.gif">
+    </div>
+    <script>
+        //document.addEventListener('DOMContentLoaded', function() {
+        //  document.getElementById('preloader').style.display = 'none';
+        //});
+        window.onload = function () {
+            //document.getElementById('preloader').style.display = 'none';
+            document.getElementById('preloader').style.opacity = 0;
+        }
+    </script>
 </body>
 </html>
